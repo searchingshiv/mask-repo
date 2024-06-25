@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: wzml-x-app
+    env: node
+    plan: free
+    buildCommand: ./deploy.sh
+    startCommand: npm start --prefix WZML-X
+    # envVars:
+    #   - key: NODE_ENV
+    #     value: production
+    #   - key: DATABASE_URL
+    #     sync: false
