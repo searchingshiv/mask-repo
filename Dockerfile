@@ -7,6 +7,9 @@ WORKDIR /usr/src/app
 # Copy the deploy script into the container.
 COPY deploy.sh ./
 
+# Grant execute permissions to the deploy script.
+RUN chmod +x deploy.sh
+
 # Run the deploy script.
 RUN ./deploy.sh
 
